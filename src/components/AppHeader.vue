@@ -5,6 +5,12 @@ export default {
 </script>
 
 <template>
+
+  <header>
+
+    h
+
+  </header>
   
 </template>
 

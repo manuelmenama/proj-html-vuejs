@@ -10,14 +10,14 @@ export default {
     <!-- componente superiore -->
     <div class="row upper-footer">
 
-      <div class="col-2">
-        
-      </div>
+      up
 
     </div>
 
     <!-- componente inferiore -->
     <div class="row lower-footer">
+
+      but
 
     </div>
   </footer>
