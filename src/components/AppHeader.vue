@@ -6,7 +6,7 @@ export default {
 
 <template>
 
-  <header class="debug">
+  <header>
 
     <div class="container my-container">
 
@@ -60,7 +60,7 @@ export default {
       <!-- container icone -->
       <div class="my-icon-container">
 
-        <i class="bi bi-list"></i>
+        <i class="fa-solid fa-bars"></i>
         <i class="bi bi-bag"></i>
         <i class="bi bi-search"></i>
 
@@ -76,7 +76,10 @@ export default {
 
 @use '../styles/partials/mixin' as *;
 @use '../styles/partials/variables' as *;
-
+header{
+  position: relative;
+  z-index: 999;
+}
 .my-container{
 
   @include flex('between');
@@ -86,10 +89,14 @@ export default {
     @include flex('center-only');
     height: 100%;
     width: 20%;
+    img{
+      height: 35px;
+    }
   }
   .my-menu-container{
     height: 100%;
     width: 70%;
+    text-transform: uppercase;
     ul{
       @include flex('only');
       width: 100%;
@@ -98,8 +105,9 @@ export default {
       li{
         width: calc(100% / 6);
         height: 100%;
-        @include flex('center-element');
+        @include flex('center-only');
         a{
+          color: $text-color-white;
           text-decoration: none;
         }
       }
@@ -110,12 +118,10 @@ export default {
     height: 100%;
     width: 10%;
     i{
+      color: $text-color-white;
       margin-left: 2rem;
       font-size: 1.2rem;
-      .bi-search{
-        display: inline-block;
-        transform: scaleX(-1);
-      }
+      cursor: pointer;     
     }
   }
 

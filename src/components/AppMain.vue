@@ -6,14 +6,14 @@ export default {
 
 <template>
 
+  <!-- sezione con jumbotron -->
+  <section class="jumbo">
+
+    <img src="../assets/img/course-9-f-img.jpg" alt="">
+
+  </section>
+
   <main>
-
-    <!-- sezione con jumbotron -->
-    <section>
-
-
-
-    </section>
 
     <!-- section con materie -->
     <section>
@@ -80,5 +80,17 @@ export default {
 </template>
 
 <style lang="scss" scoped>
+
+.jumbo{
+  width: 100%;
+  text-align: center;
+  img{
+    width: 100%;
+    transform: translateY(-100px);
+    filter: brightness(50%);
+    object-fit: cover;
+    height: 700px;
+  }
+}
 
 </style>
