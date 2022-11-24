@@ -1,5 +1,7 @@
 
+@import '/node_modules/@fortawesome/fontawesome-free/css/all.min.css';
 @import '/node_modules/bootstrap/scss/bootstrap.scss';
+@import '/node_modules/bootstrap-icons/font/bootstrap-icons.css';
 
 *,
 *::after,
@@ -25,4 +27,9 @@ body{
 
 img{
   max-width: 100%;
+}
+
+.debug{
+  background-color: rgba(100, 148, 237, 0.445);
+  border: 1px solid black;
 }

@@ -1,0 +1,25 @@
+@mixin flex($type: 'only'){
+
+  display: flex;
+
+  @if $type == 'center-element' {
+
+    align-items: center;
+    justify-content: center;
+
+  } @else if $type == 'between' {
+
+    align-items: center;
+    justify-content: space-between;
+
+  } @else if $type == 'center-only' {
+
+    align-items: center;
+
+  } @else if $type == 'center-end' {
+
+    align-items: center;
+    flex-direction: row-reverse;
+  }
+  
+}
