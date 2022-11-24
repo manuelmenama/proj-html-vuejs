@@ -6,20 +6,26 @@ export default {
 
 <template>
 
-  <footer class="container">
-    <!-- componente superiore -->
-    <div class="row upper-footer">
+  <footer>
 
-      up
+    <div class="container">
+
+      <!-- componente superiore -->
+      <div class="row upper-footer">
+  
+        up
+  
+      </div>
+  
+      <!-- componente inferiore -->
+      <div class="row lower-footer">
+  
+        but
+  
+      </div>
 
     </div>
-
-    <!-- componente inferiore -->
-    <div class="row lower-footer">
-
-      but
-
-    </div>
+    
   </footer>
   
 </template>
