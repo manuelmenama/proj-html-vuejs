@@ -16,8 +16,7 @@ export default {
   <section class="jumbo">
 
     <MainJumboSlider />
-    <!-- <img src="../assets/img/course-9-f-img.jpg" alt=""> -->
-
+    
   </section>
 
   <main>
@@ -88,10 +87,14 @@ export default {
 
 <style lang="scss" scoped>
 
+@use '../styles/partials/mixin' as *;
+@use '../styles/partials/variables' as *;
+
 .jumbo{
   width: 100%;
   text-align: center;
   transform: translateY(-100px);
+  color: $text-color-white;
 }
 
 </style>

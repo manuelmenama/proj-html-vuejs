@@ -31,7 +31,21 @@ export const store = reactive ({
   ],
 
   //store del carosello jumbotron
-
+  jumbotronCta: [
+    {
+      title: "Contemporay Ideas",
+      description: "Sed dolore consetetur sit sadipscing stet sit accusam eos est et. Eos consetetur amet sed tempor aliquyam et no takimata ea. Duo aliquyam et sadipscing rebum sed. Sed sit rebum."
+    },
+    {
+      title: "Lorem Ipsum",
+      description: "Rebum ut et ipsum magna magna dolore. Dolore magna dolore voluptua kasd voluptua duo. Tempor kasd sed sadipscing sit sea. Voluptua kasd et lorem clita tempor erat sit dolor, dolor."
+    },
+    {
+      title: "Essilio di",
+      description: "Et nonumy rebum consetetur dolore sit est et sanctus, et erat dolor aliquyam sadipscing est voluptua amet magna, ipsum stet ipsum consetetur no ea labore dolores ipsum, lorem ipsum et."
+    },
+  ],
+  
   //store delle materie con loghi
 
   //store degli insegnanti
