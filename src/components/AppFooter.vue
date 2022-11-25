@@ -1,6 +1,14 @@
 <script>
+
+import { store } from '../assets/data/store'
+
 export default {
-  name: 'AppFooter'
+  name: 'AppFooter',
+  data() {
+    return {
+      store
+    }
+  }
 }
 </script>
 
@@ -24,14 +32,14 @@ export default {
           <div>
             <i class="bi bi-telephone-inbound"></i>
             <span>
-              1-677 - inserirlo dinamico
+              {{store.contactAcademy.telephone}}
             </span>
           </div>
 
           <div>
             <i class="bi bi-clock"></i>
             <span>
-              orario dinamico
+              {{store.contactAcademy.openTime}}
             </span>
           </div>
 
@@ -44,41 +52,19 @@ export default {
 
           <ul>
 
-            <li>
-              <a href="#">
+            <li
+              v-for="popCourse in store.popularCourses"
+              :key="popCourse.id"
+              v-show="popCourse.id<4">
+              <a
+                :href="popCourse.link">
                 <h5>
                   <strong>
-                    Name Course
+                    {{popCourse.name}}
                   </strong>
                 </h5>
                 <p>
-                  Teacher Name
-                </p>
-              </a>
-            </li>
-            
-            <li>
-              <a href="#">
-                <h5>
-                  <strong>
-                    Name Course
-                  </strong>
-                </h5>
-                <p>
-                  Teacher Name
-                </p>
-              </a>
-            </li>
-
-            <li>
-              <a href="#">
-                <h5>
-                  <strong>
-                    Name Course
-                  </strong>
-                </h5>
-                <p>
-                  Teacher Name
+                  {{popCourse.teacher}}
                 </p>
               </a>
             </li>
@@ -95,33 +81,12 @@ export default {
 
           <ul>
 
-            <li>
-              <a href="#">
-                Link
-              </a>
-            </li>
-
-            <li>
-              <a href="#">
-                Link
-              </a>
-            </li>
-
-            <li>
-              <a href="#">
-                Link
-              </a>
-            </li>
-
-            <li>
-              <a href="#">
-                Link
-              </a>
-            </li>
-
-            <li>
-              <a href="#">
-                Link
+            <li
+              v-for="(utilities, index) in store.supportLinks"
+              :key="index">
+              <a
+                :href="utilities.link">
+                {{utilities.name}}
               </a>
             </li>
 
@@ -146,33 +111,27 @@ export default {
   
         <div class="col-6 my-copyright-col">
           <p>
-            Copyright
+            {{store.externalInfo.copyright}}
           </p>
         </div>
 
         <div class="col-6 my-contact-col">
 
           <div>
-            <p>CALL <span>number</span></p>
+            <p>CALL <span>{{store.externalInfo.telephone}}</span></p>
           </div>
 
           <div>
             <p>FOLLOW US</p>
             <ul>
 
-              <li>
-                <a href="#">
-                  <i class="bi bi-twitter"></i>
-                </a>
-              </li>
-              <li>
-                <a href="#">
-                  <i class="bi bi-instagram"></i>
-                </a>
-              </li>
-              <li>
-                <a href="#">
-                  <i class="fa-brands fa-facebook-f"></i>
+              <li
+                v-for="(contact, index) in store.socialContact"
+                :key="index">
+                <a
+                  :href="contact.link">
+                  <i
+                    :class="contact.logoClass"></i>
                 </a>
               </li>
 

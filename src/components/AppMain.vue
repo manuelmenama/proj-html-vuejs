@@ -1,6 +1,12 @@
 <script>
+
+import MainJumboSlider from './partials/MainJumboSlider.vue';
+
 export default {
-  name: 'AppMain'
+  name: 'AppMain',
+  components: {
+    MainJumboSlider
+  }
 }
 </script>
 
@@ -9,7 +15,8 @@ export default {
   <!-- sezione con jumbotron -->
   <section class="jumbo">
 
-    <img src="../assets/img/course-9-f-img.jpg" alt="">
+    <MainJumboSlider />
+    <!-- <img src="../assets/img/course-9-f-img.jpg" alt=""> -->
 
   </section>
 
@@ -84,13 +91,7 @@ export default {
 .jumbo{
   width: 100%;
   text-align: center;
-  img{
-    width: 100%;
-    transform: translateY(-100px);
-    filter: brightness(70%);
-    object-fit: cover;
-    height: 700px;
-  }
+  transform: translateY(-100px);
 }
 
 </style>

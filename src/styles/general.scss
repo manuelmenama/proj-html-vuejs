@@ -1,7 +1,10 @@
+@use './partials/mixin' as *;
+@use './partials/variables' as *;
 
 @import '/node_modules/@fortawesome/fontawesome-free/css/all.min.css';
 @import '/node_modules/bootstrap/scss/bootstrap.scss';
 @import '/node_modules/bootstrap-icons/font/bootstrap-icons.css';
+
 
 *,
 *::after,
@@ -29,4 +32,28 @@ body{
 .debug{
   background-color: rgba(100, 148, 237, 0.445);
   border: 1px solid black;
+}
+
+.swiper-pagination-bullet{
+  height: 20px;
+  width: 20px;
+  background-color: #ffffff80;
+}
+
+.swiper-pagination-bullet.swiper-pagination-bullet-active{
+  border: 2px solid $text-color-white;
+  background-color: rgba(255, 255, 255, 0);
+  position: relative;
+}
+
+.swiper-pagination-bullet.swiper-pagination-bullet-active::after{
+  content: '';
+  height: 6px;
+  width: 6px;
+  border-radius: 50%;
+  background-color: $text-color-white;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }

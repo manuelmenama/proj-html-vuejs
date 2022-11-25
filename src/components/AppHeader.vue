@@ -1,6 +1,14 @@
 <script>
+
+import { store } from '../assets/data/store';
+
 export default {
-  name: 'AppHeader'
+  name: 'AppHeader',
+  data() {
+    return {
+      store
+    }
+  }
 }
 </script>
 
@@ -22,34 +30,14 @@ export default {
 
         <ul>
 
-          <li>
+          <li
+            v-for="(itemMenu, index) in store.menuList"
+            :key="index">
 
-            <a href="#">link</a>
-
-          </li>
-          <li>
-
-            <a href="#">link</a>
-
-          </li>
-          <li>
-
-            <a href="#">link</a>
-
-          </li>
-          <li>
-
-            <a href="#">link</a>
-
-          </li>
-          <li>
-
-            <a href="#">link</a>
-
-          </li>
-          <li>
-
-            <a href="#">link</a>
+            <a
+              :href="itemMenu.link">
+              {{itemMenu.name}}
+            </a>
 
           </li>
           
@@ -117,7 +105,7 @@ header{
   .my-icon-container{
     @include flex('center-end');
     height: 100%;
-    width: 10%;
+    width: 20%;
     i{
       color: $text-color-white;
       margin-left: 2rem;
