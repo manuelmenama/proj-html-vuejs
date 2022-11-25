@@ -76,6 +76,7 @@ export default {
 
 @use '../styles/partials/mixin' as *;
 @use '../styles/partials/variables' as *;
+
 header{
   position: relative;
   z-index: 999;
