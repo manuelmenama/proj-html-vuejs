@@ -47,6 +47,38 @@ export const store = reactive ({
   ],
   
   //store delle materie con loghi
+  subjects: [
+    {
+      name: "Languages",
+      logoPath: "h5-custom-icon-1.png",
+      link: "#"
+    },
+    {
+      name: "Software",
+      logoPath: "h5-custom-icon-2.png",
+      link: "#"
+    },
+    {
+      name: "Business",
+      logoPath: "h5-custom-icon-3.png",
+      link: "#"
+    },
+    {
+      name: "Chemestry",
+      logoPath: "h5-custom-icon-4.png",
+      link: "#"
+    },
+    {
+      name: "Science",
+      logoPath: "h5-custom-icon-5.png",
+      link: "#"
+    },
+    {
+      name: "DIY&Craft",
+      logoPath: "h5-custom-icon-6.png",
+      link: "#"
+    },
+  ]
 
   //store degli insegnanti
 
