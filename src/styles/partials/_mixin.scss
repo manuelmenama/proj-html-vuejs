@@ -20,6 +20,11 @@
 
     align-items: center;
     flex-direction: row-reverse;
+
+  } @else if $type == 'justify-end'{
+
+    align-items: center;
+    justify-content: end;
+
   }
-  
 }

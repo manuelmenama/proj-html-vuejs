@@ -87,7 +87,7 @@ export default {
   img{
     width: 100%;
     transform: translateY(-100px);
-    filter: brightness(50%);
+    filter: brightness(70%);
     object-fit: cover;
     height: 700px;
   }
