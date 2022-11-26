@@ -9,6 +9,8 @@ import "swiper/scss";
 
 import "swiper/scss/pagination";
 
+import "../../styles/sliders/styleJumbo.scss";
+
 // import required modules
 import { Pagination } from "swiper";
 
@@ -83,6 +85,8 @@ export default {
 
 
 <style lang="scss" scoped>
+
+@use '../../styles/sliders/styleJumbo.scss';
 
 
 img{

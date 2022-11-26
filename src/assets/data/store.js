@@ -78,8 +78,21 @@ export const store = reactive ({
       logoPath: "h5-custom-icon-6.png",
       link: "#"
     },
-  ]
+  ],
 
+  //store of our number
+  ourNumber: [
+    {
+      name: 'User stories',
+      number: 168,
+      link: '#'
+    },
+    {
+      name: 'Events',
+      number: 347,
+      link: '#'
+    },
+  ],
   //store degli insegnanti
 
   //store di what in for you
@@ -90,7 +103,11 @@ export const store = reactive ({
       id: 1,
       name: "Android Developer",
       shortDescriprion: "Sed justo et takimata stet at et lorem, nonumy at consetetur sit dolore tempor sed sed stet. Sanctus lorem sed.",
-      teacher: "David Sanders",
+      teacher: {
+        name: "David Sanders",
+        work: "PROGRAMMER",
+        teacherDescription: "Sadipscing diam invidunt eirmod amet diam accusam diam. Sit est accusam dolore invidunt amet justo dolor erat aliquyam, sea ipsum."
+      },
       price: "free",
       numberOfStudent: 20,
       subject: "programming",
@@ -101,7 +118,11 @@ export const store = reactive ({
       id: 2,
       name: "Web Designing",
       shortDescriprion: "No et sit lorem takimata aliquyam accusam aliquyam tempor kasd. Dolor sanctus ipsum accusam ut elitr no sit, dolor sed.",
-      teacher: "Jennifer Powell",
+      teacher: {
+        name: "Jennifer Powell",
+        work: "DESIGNER",
+        teacherDescription: "Sadipscing diam invidunt eirmod amet diam accusam diam. Sit est accusam dolore invidunt amet justo dolor erat aliquyam, sea ipsum."
+      },
       price: "free",
       numberOfStudent: 20,
       subject: "programming",
@@ -112,7 +133,11 @@ export const store = reactive ({
       id: 3,
       name: "Financial Modeling",
       shortDescriprion: "Amet ea rebum elitr et diam no diam labore sanctus diam, et diam rebum dolores rebum. Invidunt et et sit.",
-      teacher: "Edward Bowman",
+      teacher: {
+        name: "Edward Bowman",
+        work: "STUDENT",
+        teacherDescription: "Sadipscing diam invidunt eirmod amet diam accusam diam. Sit est accusam dolore invidunt amet justo dolor erat aliquyam, sea ipsum."
+      },
       price: "$20",
       numberOfStudent: 30,
       subject: "programming",
@@ -123,7 +148,11 @@ export const store = reactive ({
       id: 4,
       name: "Business English",
       shortDescriprion: "Lorem nonumy ipsum dolore at et lorem eos est. Et lorem dolores diam sea stet sed accusam justo, accusam voluptua.",
-      teacher: "Preston Marshall",
+      teacher: {
+        name: "Preston Marshall",
+        work: "STUDENT",
+        teacherDescription: "Sadipscing diam invidunt eirmod amet diam accusam diam. Sit est accusam dolore invidunt amet justo dolor erat aliquyam, sea ipsum."
+      },
       price: "$30",
       numberOfStudent: 40,
       subject: "language",
@@ -134,7 +163,11 @@ export const store = reactive ({
       id: 5,
       name: "Social Computing",
       shortDescriprion: "Dolor sanctus est voluptua vero dolores accusam ipsum ut, no duo accusam erat dolor sed no dolores ipsum. Diam et.",
-      teacher: "David Sanders",
+      teacher: {
+        name: "David Sanders",
+        work: "STUDENT",
+        teacherDescription: "Sadipscing diam invidunt eirmod amet diam accusam diam. Sit est accusam dolore invidunt amet justo dolor erat aliquyam, sea ipsum."
+      },
       price: "free",
       numberOfStudent: 100,
       subject: "tecnology",
@@ -145,7 +178,11 @@ export const store = reactive ({
       id: 6,
       name: "Learn Spanish",
       shortDescriprion: "Justo invidunt lorem tempor gubergren magna. Lorem et clita diam tempor elitr aliquyam accusam dolor. Sed magna dolores erat sed.",
-      teacher: "Jennie King",
+      teacher: {
+        name: "Jennie King",
+        work: "STUDENT",
+        teacherDescription: "Sadipscing diam invidunt eirmod amet diam accusam diam. Sit est accusam dolore invidunt amet justo dolor erat aliquyam, sea ipsum."
+      },
       price: "$30",
       numberOfStudent: 30,
       subject: "language",

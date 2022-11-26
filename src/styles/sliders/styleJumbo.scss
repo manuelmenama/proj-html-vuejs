@@ -1,0 +1,26 @@
+@use '../partials/mixin' as *;
+@use '../partials/variables' as *;
+
+.swiper-pagination-bullet{
+  height: 20px;
+  width: 20px;
+  background-color: #ffffffcc;
+}
+
+.swiper-pagination-bullet.swiper-pagination-bullet-active{
+  border: 2px solid $text-color-white;
+  background-color: rgba(255, 255, 255, 0);
+  position: relative;
+}
+
+.swiper-pagination-bullet.swiper-pagination-bullet-active::after{
+  content: '';
+  height: 6px;
+  width: 6px;
+  border-radius: 50%;
+  background-color: $text-color-white;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}

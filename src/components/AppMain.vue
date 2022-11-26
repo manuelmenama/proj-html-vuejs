@@ -2,10 +2,22 @@
 
 import MainJumboSlider from './partials/MainJumboSlider.vue';
 
+import { store } from '../assets/data/store'
+
 export default {
   name: 'AppMain',
   components: {
     MainJumboSlider
+  },
+  data() {
+    return {
+      store
+    }
+  },
+  methods: {
+    getImagePath: function(imgPath) {
+      return new URL(`../assets/img/${imgPath}`, import.meta.url).href;
+    }
   }
 }
 </script>
@@ -20,30 +32,114 @@ export default {
   </section>
 
   <main>
-    m
+
     <!-- section con materie -->
-    <section>
+    <section class="container my-subject-container">
+      
+      <div class="row">
 
+        <div
+          class="col-2"
+          v-for="(subject, index) in store.subjects"
+          :key="index">
 
+          <div class="my-subject-card">
+
+            <img :src="getImagePath(subject.logoPath)" :alt="subject.name">
+            <h4>{{subject.name}}</h4>
+
+          </div>
+
+        </div>
+
+      </div>
 
     </section>
 
     <!-- section con cta "the trusted name" e img -->
-    <section>
+    <section class="my-cta-container">
 
+      <div class="container">
 
+        <div class="row">
+  
+          <div class="col-6">
+  
+            <h2>
+              <div>
+                The Trusted Name 
+              </div>
+              for In-Home Tutoring.
+            </h2>
+  
+          </div>
+  
+        </div>
+  
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta molestias quisquam atque cumque ea eveniet inventore ipsam dolorem molestiae rem, quaerat, velit dolore reiciendis? Non rem quae corporis recusandae nam?</p>
+  
+        <a href="#">
+          <strong>
+            LEARN MORE
+          </strong>
+        </a>
+  
+        <img src="../assets/img/h5-img-1.jpg" alt="">
+      
+      </div>
+      
 
     </section>
 
     <!-- sezione mappamondo -->
-    <section>
+    <section class="my-container-world">
 
+      <div class="container">
 
+        <div class="row">
+
+          <div class="col-6">
+
+            <img src="../assets/img/h5-img-2.jpg" alt="">
+            
+          </div>
+
+          <div class="col-6 my-world-col">
+
+            <h2>Empowering Children to Reach Their Potential.</h2>
+
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis dicta hic fugit architecto itaque consequuntur tempore rerum maxime ea nesciunt commodi, praesentium.
+            </p>
+
+            <div class="container my-our-number-container">
+              <div class="row">
+
+                <div
+                  class="col-6"
+                  v-for="(type, index) in store.ourNumber"
+                  :key="index">
+                  <a href="#">
+
+                    <h2>{{type.number}}</h2>
+
+                    <h5>{{type.name}}</h5>
+
+                  </a>
+                </div>
+                
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
 
     </section>
 
     <!-- sezione con istruttori -->
-    <section>
+    <section class="my-istructor-container">
 
 
 
@@ -95,6 +191,90 @@ export default {
   text-align: center;
   transform: translateY(-100px);
   color: $text-color-white;
+}
+.my-subject-container{
+  margin-bottom: 7rem;
+}
+.my-subject-card{
+  height: 250px;
+  background-color: $subject-bg-color;
+  @include flex('center-element');
+  flex-direction: column;
+  img{
+    margin-bottom: 3rem;
+  }
+  h4{
+    font-weight: bold;
+    color: $subject-text-color;
+  }
+}
+
+.my-cta-container{
+  border-bottom: 1px solid $cta-border;
+  margin-bottom: 7rem;
+  h2{
+    font-size: 2.6rem;
+    font-weight: bold;
+    margin-bottom: 1.5rem;
+  }
+  p{
+    color: $cta-text-color;
+    font-size: 1.2rem;
+    font-weight: lighter;
+    margin-bottom: 1.5rem;
+
+  }
+  a{
+    text-decoration: none;
+    color: $cta-link-color;
+    font-size: 0.95rem;
+  }
+}
+
+.my-container-world{
+  margin-bottom: 7rem;
+
+  .my-world-col{
+    padding-right: 8rem;
+    padding-left: 2rem;
+  }
+  
+  img{
+    max-width: 100%;
+  }
+  h2{
+    font-size: 2.6rem;
+    font-weight: bold;
+    margin-bottom: 1.5rem;
+  }
+  p{
+    color: $cta-text-color;
+    font-size: 1.2rem;
+    font-weight: lighter;
+    margin-bottom: 1.5rem;
+
+  }
+}
+.my-our-number-container{
+  h2,
+  h5{
+    color: $cta-link-color;
+    font-weight: bold;
+  }
+  h2{
+    margin-bottom: 0.5rem;
+    font-size: 3.5rem;
+  }
+  a{
+    text-decoration: none;
+  }
+}
+
+.my-istructor-container{
+  background-image: url('../assets/img/h5-parallax-img-1.png');
+  height: 650px;
+  margin-bottom: 7rem;
+  background-position: center top;
 }
 
 </style>

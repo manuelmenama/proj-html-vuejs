@@ -64,7 +64,7 @@ export default {
                   </strong>
                 </h5>
                 <p>
-                  {{popCourse.teacher}}
+                  {{popCourse.teacher.name}}
                 </p>
               </a>
             </li>
