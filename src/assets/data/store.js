@@ -93,9 +93,79 @@ export const store = reactive ({
       link: '#'
     },
   ],
-  //store degli insegnanti
-
   //store di what in for you
+  whatIn: [
+    {
+      question: "What We Do",
+      answer: "Learning Possibilities",
+      longAnswer: "Justo stet et ut ipsum consetetur et eos eos amet. Sit sed et gubergren lorem sed, at duo vero sit accusam tempor labore amet sit et. Nonumy magna et sadipscing dolores no.",
+      logoPath: "h12-tabs-icon-1",
+      powerPoint: [
+        "We enrich lives through insividual learning.",
+        "Mazimizing potential through individual attention.",
+        "The trusted name for specialized training.",
+        "People teach. People learn. This is were they connect."
+      ]
+    },
+    {
+      question: "Degree Programme",
+      answer: "Labore labore sadipscing",
+      longAnswer: "Name the open present ere say a childe and, feere his parasites they sullen so in kiss been alas, not are so was scape. Mood land a honeyed den it..",
+      logoPath: "h12-tabs-icon-2",
+      powerPoint: [
+        "We enrich lives through insividual learning.",
+        "Mazimizing potential through individual attention.",
+        "The trusted name for specialized training.",
+        "People teach. People learn. This is were they connect."
+      ]
+    },
+    {
+      question: "Career Achievements",
+      answer: "Dolor diam",
+      longAnswer: "Did smile for of monastic to. Of oer few breast spent go of many them. Fall seemed albions feel maddest he sad for. The thence might his longed nor then.",
+      logoPath: "h12-tabs-icon-3",
+      powerPoint: [
+        "We enrich lives through insividual learning.",
+        "Mazimizing potential through individual attention.",
+        "The trusted name for specialized training.",
+        "People teach. People learn. This is were they connect."
+      ]
+    },
+    {
+      question: "Personal Management",
+      answer: "Et takimata et",
+      longAnswer: "Holy sore glare been to isle, harolds to was or he like waste nor and, revel long forgot glare love steel by. Bower few had from some den his chill.",
+      logoPath: "h12-tabs-icon-4",
+      powerPoint: [
+        "We enrich lives through insividual learning.",
+        "Mazimizing potential through individual attention.",
+        "The trusted name for specialized training.",
+        "People teach. People learn. This is were they connect."
+      ]
+    },
+    {
+      question: "Steps To Success",
+      answer: "Given he a",
+      longAnswer: "Shell sighed isle sorrow ancient who suits sea, and native where rhyme shades in him fall sore lands. In sacred his did honeyed lines did by in. And uses not.",
+      logoPath: "h12-tabs-icon-5",
+      powerPoint: [
+        "We enrich lives through insividual learning.",
+        "Magna vero amet dolor invidunt vero..",
+        "People teach. People learn. This is were they connect."
+      ]
+    },
+    {
+      question: "Knowledge Transfer",
+      answer: "Learning Possibilities",
+      longAnswer: "Deigned a ah than atonement knew sight, friends and dwelt yea ever alone few nor deadly paphian. Sighed many was oer me a. Nor mood and along but maddest before.",
+      logoPath: "h12-tabs-icon-6",
+      powerPoint: [
+        "We enrich lives through insividual learning.",
+        "Mazimizing potential through individual attention.",
+        "Earth true open below soul and ever."
+      ]
+    },
+  ],
 
   //store card "popular courses"
   popularCourses: [
@@ -106,7 +176,8 @@ export const store = reactive ({
       teacher: {
         name: "David Sanders",
         work: "PROGRAMMER",
-        teacherDescription: "Sadipscing diam invidunt eirmod amet diam accusam diam. Sit est accusam dolore invidunt amet justo dolor erat aliquyam, sea ipsum."
+        teacherDescription: "Sadipscing diam invidunt eirmod amet diam accusam diam. Sit est accusam dolore invidunt amet justo dolor erat aliquyam, sea ipsum.",
+        portraitPath: "instructor-img-5.jpg"
       },
       price: "free",
       numberOfStudent: 20,
@@ -121,7 +192,8 @@ export const store = reactive ({
       teacher: {
         name: "Jennifer Powell",
         work: "DESIGNER",
-        teacherDescription: "Sadipscing diam invidunt eirmod amet diam accusam diam. Sit est accusam dolore invidunt amet justo dolor erat aliquyam, sea ipsum."
+        teacherDescription: "Sadipscing diam invidunt eirmod amet diam accusam diam. Sit est accusam dolore invidunt amet justo dolor erat aliquyam, sea ipsum.",
+        portraitPath: "instructor-img-8.jpg"
       },
       price: "free",
       numberOfStudent: 20,
@@ -135,8 +207,9 @@ export const store = reactive ({
       shortDescriprion: "Amet ea rebum elitr et diam no diam labore sanctus diam, et diam rebum dolores rebum. Invidunt et et sit.",
       teacher: {
         name: "Edward Bowman",
-        work: "STUDENT",
-        teacherDescription: "Sadipscing diam invidunt eirmod amet diam accusam diam. Sit est accusam dolore invidunt amet justo dolor erat aliquyam, sea ipsum."
+        work: "TEACHER",
+        teacherDescription: "Sadipscing diam invidunt eirmod amet diam accusam diam. Sit est accusam dolore invidunt amet justo dolor erat aliquyam, sea ipsum.",
+        portraitPath: "instructor-img-1.jpg"
       },
       price: "$20",
       numberOfStudent: 30,
@@ -151,7 +224,8 @@ export const store = reactive ({
       teacher: {
         name: "Preston Marshall",
         work: "STUDENT",
-        teacherDescription: "Sadipscing diam invidunt eirmod amet diam accusam diam. Sit est accusam dolore invidunt amet justo dolor erat aliquyam, sea ipsum."
+        teacherDescription: "Sadipscing diam invidunt eirmod amet diam accusam diam. Sit est accusam dolore invidunt amet justo dolor erat aliquyam, sea ipsum.",
+        portraitPath: "instructor-img-9.jpg"
       },
       price: "$30",
       numberOfStudent: 40,
@@ -166,7 +240,8 @@ export const store = reactive ({
       teacher: {
         name: "David Sanders",
         work: "STUDENT",
-        teacherDescription: "Sadipscing diam invidunt eirmod amet diam accusam diam. Sit est accusam dolore invidunt amet justo dolor erat aliquyam, sea ipsum."
+        teacherDescription: "Sadipscing diam invidunt eirmod amet diam accusam diam. Sit est accusam dolore invidunt amet justo dolor erat aliquyam, sea ipsum.",
+        portraitPath: "instructor-img-6.jpg"
       },
       price: "free",
       numberOfStudent: 100,
@@ -181,7 +256,8 @@ export const store = reactive ({
       teacher: {
         name: "Jennie King",
         work: "STUDENT",
-        teacherDescription: "Sadipscing diam invidunt eirmod amet diam accusam diam. Sit est accusam dolore invidunt amet justo dolor erat aliquyam, sea ipsum."
+        teacherDescription: "Sadipscing diam invidunt eirmod amet diam accusam diam. Sit est accusam dolore invidunt amet justo dolor erat aliquyam, sea ipsum.",
+        portraitPath: "instructor-img-4.jpg"
       },
       price: "$30",
       numberOfStudent: 30,

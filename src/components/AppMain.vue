@@ -3,7 +3,7 @@
 import MainJumboSlider from './partials/MainJumboSlider.vue';
 import MainTeacherSlider from './partials/MainTeacherSlider.vue';
 
-import { store } from '../assets/data/store'
+import { store } from '../assets/data/store';
 
 export default {
   name: 'AppMain',

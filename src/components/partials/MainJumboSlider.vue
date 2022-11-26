@@ -2,14 +2,12 @@
 
 // Import Swiper Vue.js components
 import { Swiper, SwiperSlide } from "swiper/vue";
-import {store} from "../../assets/data/store"
-
+import {store} from "../../assets/data/store";
 // Import Swiper styles
 import "swiper/scss";
 
 import "swiper/scss/pagination";
 
-import "../../styles/sliders/styleJumbo";
 
 // import required modules
 import { Pagination } from "swiper";
@@ -41,7 +39,8 @@ export default {
       clickable: true,
     }"
     :modules="modules"
-    class="mySwiper"
+    class="mySwiper1"
+    id="swiperid1"
   >
     <swiper-slide
       v-for="(title, index) in store.jumbotronCta"
@@ -86,8 +85,7 @@ export default {
 
 <style lang="scss" scoped>
 
-@use '../../styles/sliders/styleJumbo.scss';
-
+@use '../../styles/slider/styleJumbo.scss';
 
 img{
   width: 100%;
