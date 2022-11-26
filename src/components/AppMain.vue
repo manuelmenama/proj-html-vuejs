@@ -1,13 +1,15 @@
 <script>
 
 import MainJumboSlider from './partials/MainJumboSlider.vue';
+import MainTeacherSlider from './partials/MainTeacherSlider.vue';
 
 import { store } from '../assets/data/store'
 
 export default {
   name: 'AppMain',
   components: {
-    MainJumboSlider
+    MainJumboSlider,
+    MainTeacherSlider
   },
   data() {
     return {
@@ -141,7 +143,7 @@ export default {
     <!-- sezione con istruttori -->
     <section class="my-istructor-container">
 
-
+      <MainTeacherSlider />
 
     </section>
 

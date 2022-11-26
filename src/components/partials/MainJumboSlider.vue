@@ -9,7 +9,7 @@ import "swiper/scss";
 
 import "swiper/scss/pagination";
 
-import "../../styles/sliders/styleJumbo.scss";
+import "../../styles/sliders/styleJumbo";
 
 // import required modules
 import { Pagination } from "swiper";
