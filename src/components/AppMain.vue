@@ -158,12 +158,14 @@ export default {
           <div class="col-4">
 
             <ul class="list-group rounded-0 my-ul-group">
-              <li class="list-group-item rounded-0 my-li-item my-li-item-active"><h6>primo</h6></li>
-              <li class="list-group-item my-li-item"><h6>primo</h6></li>
-              <li class="list-group-item my-li-item"><h6>primo</h6></li>
-              <li class="list-group-item my-li-item"><h6>primo</h6></li>
-              <li class="list-group-item my-li-item"><h6>primo</h6></li>
-              <li class="list-group-item my-li-item"><h6>primo</h6></li>
+
+              <li
+                class="list-group-item rounded-0 my-li-item"
+                v-for="(element, index) in store.whatIn"
+                :key="index"
+                :class="{'my-li-item-active': store.whatInCounter === index}"
+                @click="store.whatInCounter=index"><h6>{{element.question}}</h6></li>
+              
             </ul>
 
           </div>
@@ -174,18 +176,41 @@ export default {
 
               <div class="row">
 
-                <div class="col-12">
+                <div class="col-12 pt-3">
 
-                  big
+                  <h2>
+                    {{store.whatIn[store.whatInCounter].answer}}
+                  </h2>
+
+                  <p>
+                    {{store.whatIn[store.whatInCounter].longAnswer}}
+                  </p>
 
                 </div>
 
-                <div class="col-10">
-                  li
+                <div class="col-9 my-personal-list">
+                  
+
+                  <ul>
+
+                    <li v-for="(liElement, index) in store.whatIn[store.whatInCounter].powerPoint"
+                      :key="index">
+
+                      <p><i class="fa-solid fa-check"></i> {{liElement}}</p>
+
+                    </li>
+                    
+
+                  </ul>
+                  
+                  
+
                 </div>
 
-                <div class="col-2">
-                  d
+                <div class="col-3 align-self-end my-mini-icon">
+
+                  <img :src="getImagePath(store.whatIn[store.whatInCounter].logoPath)" alt="">
+
                 </div>
 
               </div>
@@ -201,7 +226,7 @@ export default {
     </section>
 
     <!-- sezione con immagine di background -->
-    <div class="background">
+    <div class="my-background">
 
       <!-- sezione corsi disponibili -->
       <section>
@@ -327,7 +352,22 @@ export default {
 }
 
 .my-what-in-container{
-  margin-bottom: 7rem;
+  margin-bottom: 2rem;
+  padding-bottom: 7rem;
+  border-bottom: 1px solid $cta-border;
+
+  h2{
+    margin-bottom: 2rem;
+  }
+
+  p{
+    color: $whatin-text-color;
+    font-size: 1.2rem;
+  }
+
+  .my-mini-icon img{
+    max-width: 75%;
+  }
 
   .my-ul-group{
     height: 100%;
@@ -344,9 +384,32 @@ export default {
     &.my-li-item-active{
       background-color: $whatin-active-color;
       border-left: 8px solid $whatin-active-border;
-      padding-left: calc(2rem - 8px);
+      padding-left: calc(2rem - 7px);
     }
   }
+
+  .my-personal-list{
+    ul{
+      margin-top: 1rem;
+      li{
+        margin-left: -2rem;
+        margin-bottom: 3rem;
+        i{
+          color: $whatin-active-border;
+          display: inline-block;
+          transform: scaleX(.7);
+        }
+      }
+      list-style: none;
+    }
+  }
+}
+
+.my-background{
+  
+  min-height: 600px;
+  margin-bottom: 7rem;
+  background-image: url(../assets/img/background-pattern.jpg);
 }
 
 </style>

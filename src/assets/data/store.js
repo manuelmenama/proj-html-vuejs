@@ -99,7 +99,7 @@ export const store = reactive ({
       question: "What We Do",
       answer: "Learning Possibilities",
       longAnswer: "Justo stet et ut ipsum consetetur et eos eos amet. Sit sed et gubergren lorem sed, at duo vero sit accusam tempor labore amet sit et. Nonumy magna et sadipscing dolores no.",
-      logoPath: "h12-tabs-icon-1",
+      logoPath: "h12-tabs-icon-1.png",
       powerPoint: [
         "We enrich lives through insividual learning.",
         "Mazimizing potential through individual attention.",
@@ -111,7 +111,7 @@ export const store = reactive ({
       question: "Degree Programme",
       answer: "Labore labore sadipscing",
       longAnswer: "Name the open present ere say a childe and, feere his parasites they sullen so in kiss been alas, not are so was scape. Mood land a honeyed den it..",
-      logoPath: "h12-tabs-icon-2",
+      logoPath: "h12-tabs-icon-2.png",
       powerPoint: [
         "We enrich lives through insividual learning.",
         "Mazimizing potential through individual attention.",
@@ -123,7 +123,7 @@ export const store = reactive ({
       question: "Career Achievements",
       answer: "Dolor diam",
       longAnswer: "Did smile for of monastic to. Of oer few breast spent go of many them. Fall seemed albions feel maddest he sad for. The thence might his longed nor then.",
-      logoPath: "h12-tabs-icon-3",
+      logoPath: "h12-tabs-icon-3.png",
       powerPoint: [
         "We enrich lives through insividual learning.",
         "Mazimizing potential through individual attention.",
@@ -135,7 +135,7 @@ export const store = reactive ({
       question: "Personal Management",
       answer: "Et takimata et",
       longAnswer: "Holy sore glare been to isle, harolds to was or he like waste nor and, revel long forgot glare love steel by. Bower few had from some den his chill.",
-      logoPath: "h12-tabs-icon-4",
+      logoPath: "h12-tabs-icon-4.png",
       powerPoint: [
         "We enrich lives through insividual learning.",
         "Mazimizing potential through individual attention.",
@@ -147,7 +147,7 @@ export const store = reactive ({
       question: "Steps To Success",
       answer: "Given he a",
       longAnswer: "Shell sighed isle sorrow ancient who suits sea, and native where rhyme shades in him fall sore lands. In sacred his did honeyed lines did by in. And uses not.",
-      logoPath: "h12-tabs-icon-5",
+      logoPath: "h12-tabs-icon-5.png",
       powerPoint: [
         "We enrich lives through insividual learning.",
         "Magna vero amet dolor invidunt vero..",
@@ -158,7 +158,7 @@ export const store = reactive ({
       question: "Knowledge Transfer",
       answer: "Learning Possibilities",
       longAnswer: "Deigned a ah than atonement knew sight, friends and dwelt yea ever alone few nor deadly paphian. Sighed many was oer me a. Nor mood and along but maddest before.",
-      logoPath: "h12-tabs-icon-6",
+      logoPath: "h12-tabs-icon-6.png",
       powerPoint: [
         "We enrich lives through insividual learning.",
         "Mazimizing potential through individual attention.",
@@ -166,6 +166,7 @@ export const store = reactive ({
       ]
     },
   ],
+  whatInCounter: 0,
 
   //store card "popular courses"
   popularCourses: [
