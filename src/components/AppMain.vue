@@ -77,14 +77,15 @@ export default {
           </div>
   
         </div>
-  
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta molestias quisquam atque cumque ea eveniet inventore ipsam dolorem molestiae rem, quaerat, velit dolore reiciendis? Non rem quae corporis recusandae nam?</p>
-  
-        <a href="#">
-          <strong>
-            LEARN MORE
-          </strong>
-        </a>
+        <div class="col-12">
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta molestias quisquam atque cumque ea eveniet inventore ipsam dolorem molestiae rem, quaerat, velit dolore reiciendis? Non rem quae corporis recusandae nam?</p>
+    
+          <a href="#">
+            <strong>
+              LEARN MORE
+            </strong>
+          </a>
+        </div>
   
         <img src="../assets/img/h5-img-1.jpg" alt="">
       
@@ -148,8 +149,54 @@ export default {
     </section>
 
     <!-- sezione what in us for you -->
-    <section>
+    <section class="my-what-in-container">
 
+      <div class="container">
+
+        <div class="row">
+
+          <div class="col-4">
+
+            <ul class="list-group rounded-0 my-ul-group">
+              <li class="list-group-item rounded-0 my-li-item my-li-item-active"><h6>primo</h6></li>
+              <li class="list-group-item my-li-item"><h6>primo</h6></li>
+              <li class="list-group-item my-li-item"><h6>primo</h6></li>
+              <li class="list-group-item my-li-item"><h6>primo</h6></li>
+              <li class="list-group-item my-li-item"><h6>primo</h6></li>
+              <li class="list-group-item my-li-item"><h6>primo</h6></li>
+            </ul>
+
+          </div>
+
+          <div class="col-8">
+
+            <div class="container">
+
+              <div class="row">
+
+                <div class="col-12">
+
+                  big
+
+                </div>
+
+                <div class="col-10">
+                  li
+                </div>
+
+                <div class="col-2">
+                  d
+                </div>
+
+              </div>
+
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
 
     </section>
 
@@ -277,6 +324,29 @@ export default {
   height: 650px;
   margin-bottom: 7rem;
   background-position: center top;
+}
+
+.my-what-in-container{
+  margin-bottom: 7rem;
+
+  .my-ul-group{
+    height: 100%;
+    h6{
+      color: #847b7b;
+      font-weight: bold;
+      line-height: 100%;
+    }
+  }
+  .my-li-item{
+    padding: 2rem;
+    height: 100%;
+    display: inline-block;
+    &.my-li-item-active{
+      background-color: $whatin-active-color;
+      border-left: 8px solid $whatin-active-border;
+      padding-left: calc(2rem - 8px);
+    }
+  }
 }
 
 </style>

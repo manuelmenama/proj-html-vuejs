@@ -81,6 +81,7 @@ header{
     img{
       height: 35px;
     }
+    
   }
   .my-menu-container{
     height: 100%;
