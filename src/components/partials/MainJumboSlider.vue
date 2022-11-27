@@ -85,7 +85,6 @@ export default {
 
 <style lang="scss" scoped>
 
-@use '../../styles/slider/styleJumbo.scss';
 
 img{
   width: 100%;

@@ -2,6 +2,7 @@
 
 import MainJumboSlider from './partials/MainJumboSlider.vue';
 import MainTeacherSlider from './partials/MainTeacherSlider.vue';
+import MainPopularSlider from './partials/MainPopularSlider.vue';
 
 import { store } from '../assets/data/store';
 
@@ -9,7 +10,8 @@ export default {
   name: 'AppMain',
   components: {
     MainJumboSlider,
-    MainTeacherSlider
+    MainTeacherSlider,
+    MainPopularSlider
   },
   data() {
     return {
@@ -229,9 +231,36 @@ export default {
     <div class="my-background">
 
       <!-- sezione corsi disponibili -->
-      <section>
+      <section class="my-popular-section">
         
+        <div class="container">
 
+          <div class="row">
+
+            <div class="col-10 offset-1 text-center my-popular-title">
+
+              <h2>
+                Popular Courses
+              </h2>
+              <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Odit rerum placeat quaerat quam distinctio in, earum reiciendis eligendi hic deleniti sed recusandae reprehenderit natus voluptate, dolorem exercitationem dicta dolore. Maxime.
+              </p>
+
+            </div>
+
+          </div>
+
+        </div>
+
+        <div class="my-card-wrapper">
+
+          <div class="container">
+
+            <MainPopularSlider />
+            
+          </div>
+
+        </div>
 
       </section>
 
@@ -410,6 +439,25 @@ export default {
   min-height: 600px;
   margin-bottom: 7rem;
   background-image: url(../assets/img/background-pattern.jpg);
+}
+
+.my-popular-section{
+
+  .my-popular-title{
+    margin-bottom: 5rem;
+  }
+
+  h2{
+    margin-bottom: 2rem;
+  }
+
+  p{
+    font-size: 1.2rem;
+    color: $cta-text-color;
+  }
+
+  
+
 }
 
 </style>
