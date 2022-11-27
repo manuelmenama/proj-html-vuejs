@@ -252,15 +252,15 @@ export default {
 
         </div>
 
-        <div class="my-card-wrapper">
+        
 
-          <div class="container">
+        <div class="container my-wrapper-popular">
 
-            <MainPopularSlider />
-            
-          </div>
-
+          <MainPopularSlider />
+          
         </div>
+
+       
 
       </section>
 
@@ -383,7 +383,7 @@ export default {
 .my-what-in-container{
   margin-bottom: 2rem;
   padding-bottom: 7rem;
-  border-bottom: 1px solid $cta-border;
+  
 
   h2{
     margin-bottom: 2rem;
@@ -435,13 +435,16 @@ export default {
 }
 
 .my-background{
-  
-  min-height: 600px;
-  margin-bottom: 7rem;
+  border-top: 1px solid $cta-border;
+  padding-top: 5rem;
+  min-height: 700px;
   background-image: url(../assets/img/background-pattern.jpg);
+  border-bottom: 1px solid $cta-border;
 }
 
 .my-popular-section{
+
+  margin-bottom: 7rem;
 
   .my-popular-title{
     margin-bottom: 5rem;
@@ -456,7 +459,9 @@ export default {
     color: $cta-text-color;
   }
 
-  
+  .my-wrapper-popular{
+    margin-bottom: 2rem;
+  }
 
 }
 

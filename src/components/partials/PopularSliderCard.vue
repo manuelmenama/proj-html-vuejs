@@ -1,6 +1,14 @@
 <script>
 export default {
-  name: 'PopularSliderCard'
+  name: 'PopularSliderCard',
+  props: {
+    course: Array
+  },
+  methods: {
+    getImagePath: function(imgPath) {
+      return new URL(`../../assets/img/${imgPath}`, import.meta.url).href;
+    }
+  }
 }
 </script>
 
@@ -8,35 +16,42 @@ export default {
 
 <div class="my-card">
 
-<img src="../../assets/img/course-1-f-img.jpg" alt="">
+<img :src="getImagePath(course.imagePath)" alt="">
 
 
 <div class="my-ex-image">
 
   <div class="my-top-wrapper">
     <div class="my-text-course">
-      <h5>Nome Corso</h5>
+      <h5>{{course.name}}</h5>
       <P>
-        Lorem ipsum.
+        {{course.teacher.name}}
       </P>
     </div>
     <div class="my-label-course">
-      <div class="my-label"><span>FREE</span></div>
+      <div
+        class="my-label"
+        :class="{'my-label-price' : course.price!=='free'}"
+      >
+        <span>
+          {{course.price}}
+        </span>
+      </div>
     </div>
   </div>
 
   <p>
-    Lorem, ipsum dolor sit amet consectetur adipisicing elit. Doloribus nam temporibus velit veniam deserunt reprehenderit?
+    {{course.shortDescriprion}}
   </p>
 
   <div class="my-other-label">
     <span>
       <i class="bi bi-person-fill"></i>
-      <span>number</span>
+      <span>{{course.numberOfStudent}}</span>
     </span>
     <span>
       <i class="bi bi-tag-fill"></i>
-      <span>Name</span>
+      <span>{{course.subject}}</span>
     </span>
   </div>
 
@@ -52,52 +67,62 @@ export default {
 @use '../../styles/partials/mixin' as *;
 @use '../../styles/partials/variables' as *;
 
-.my-card-wrapper{
-    width: 100%;
-    .my-card{
-      background-color: #ffffff;
-      border: 1px solid #f2f2f2;
-      img{
-        max-width: 100%;
+
+  .my-card{
+    background-color: #ffffff;
+    border: 1px solid #f2f2f2;
+    min-height: 445px;
+    img{
+      max-width: 100%;
+    }
+    h5{
+      color: $subject-text-color;
+      font-weight: bold;
+    }
+    .my-ex-image{
+      padding: 1rem;
+      &>p{
+        color: #808080;
       }
-      h5{
-        color: $subject-text-color;
+    }
+    .my-top-wrapper{
+      @include flex('only');
+      justify-content: space-between;
+      .my-text-course p{
+        color: $whatin-text-color;
+        font-size: 1rem;
         font-weight: bold;
       }
-      .my-ex-image{
-        padding: 1rem
+    }
+    .my-label-course{
+      .my-label{
+        background-color: #ffd740;
+        height: 20px;
+        line-height: 20px;
+        padding: 0 10px;
+        border-radius: 10px;
+        color: #ffffff;
+        font-size: 0.7rem;
+        font-weight: bold;
+        text-transform: uppercase;
       }
-      .my-top-wrapper{
-        @include flex('only');
-        justify-content: space-between;
-        .my-text-course p{
-          color: $whatin-text-color;
-          font-size: 1rem;
-          font-weight: bold;
-        }
+      .my-label-price{
+        background-color: #40c4ff;
       }
-      .my-label-course{
-        .my-label{
-          background-color: #ffd740;
-          height: 20px;
-          line-height: 20px;
-          padding: 0 10px;
-          border-radius: 10px;
-          color: #ffffff;
-          font-size: 0.7rem;
-          font-weight: bold;
-        }
-        .my-label-price{
-          background-color: #40c4ff;
-        }
+    }
+    .my-other-label{
+      color: $whatin-text-color;
+      &>span{
+        padding-right: 1rem;
       }
-      .my-other-label{
-        color: $whatin-text-color;
-        &>span{
-          padding-right: 1rem;
-        }
+      span>span{
+        margin-left: 0.3rem;
+        text-transform: uppercase;
+        font-size: 0.9rem;
+        font-weight: bold;
       }
     }
   }
+
 
 </style>

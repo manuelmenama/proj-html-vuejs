@@ -1,5 +1,7 @@
 <script>
 
+import { store } from '../../assets/data/store'
+ 
 import PopularSliderCard from './PopularSliderCard.vue';
 import { Swiper, SwiperSlide } from "swiper/vue";
 
@@ -23,6 +25,11 @@ export default {
       modules: [Pagination, Navigation],
     };
   },
+  data() {
+    return {
+      store
+    }
+  }
 }
 </script>
 
@@ -32,8 +39,6 @@ export default {
     :slidesPerView="3"
     :spaceBetween="30"
     :slidesPerGroup="3"
-    :loop="true"
-    :loopFillGroupWithBlank="true"
     :pagination="{
       clickable: true,
     }"
@@ -42,29 +47,15 @@ export default {
     class="mySwiper"
     id="swiperId3"
   >
-    <swiper-slide>
-      <PopularSliderCard />
-    </swiper-slide>
-    <swiper-slide>
-      <PopularSliderCard />
-      
-    </swiper-slide>
-    <swiper-slide>
-      <PopularSliderCard />
-      
-    </swiper-slide>
-    <swiper-slide>
-      <PopularSliderCard />
+
+    <swiper-slide
+      v-for="(course) in store.popularCourses"
+      :key="course.id"
+    >
+      <PopularSliderCard :course="course" />
 
     </swiper-slide>
-    <swiper-slide>
-      <PopularSliderCard />
-
-    </swiper-slide>
-    <swiper-slide>
-      <PopularSliderCard />
-      
-    </swiper-slide>
+    
   </swiper>
   
 </template>

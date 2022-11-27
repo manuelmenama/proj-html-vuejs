@@ -269,6 +269,50 @@ export const store = reactive ({
   ],
 
   //store pricing plan
+  paymentPlans: [
+    {
+      type: "Standard",
+      price: "$12",
+      numberOfCourses: 2,
+      duration: "15 Days",
+      coursesIncluded: {
+        webDesigning: true,
+        humanCenteredDesign: true,
+        basicMarketing: false,
+        pytonForEverybody: false,
+        androidDeveloper: false,
+        businessEnglish: false
+      }
+    },
+    {
+      type: "Professional",
+      price: "$59",
+      numberOfCourses: 4,
+      duration: "30 Days",
+      coursesIncluded: {
+        webDesigning: true,
+        humanCenteredDesign: true,
+        basicMarketing: true,
+        pytonForEverybody: true,
+        androidDeveloper: false,
+        businessEnglish: false
+      }
+    },
+    {
+      type: "Advanced",
+      price: "$88",
+      numberOfCourses: 2,
+      duration: "30 Days",
+      coursesIncluded: {
+        webDesigning: true,
+        humanCenteredDesign: true,
+        basicMarketing: true,
+        pytonForEverybody: true,
+        androidDeveloper: true,
+        businessEnglish: true
+      }
+    },
+  ],
 
   //store famous clienti
 

@@ -95,3 +95,17 @@ body{
 #swiperId3 .swiper-button-prev{
   display: none;
 }
+
+#swiperId3 .swiper-pagination{
+  bottom: -5px;
+}
+
+#swiperId3 .swiper-pagination-bullet{
+  height: 12px;
+  width: 12px;
+  background: #40c4ff;
+}
+
+#swiperId3 .swiper-pagination-bullet.swiper-pagination-bullet-active{
+  background-color: #40c4ff;
+}
