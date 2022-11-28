@@ -26,7 +26,7 @@ export default {
       </div>
 
       <!-- container menu -->
-      <div class="my-menu-container">
+      <div class="d-none.md my-menu-container">
 
         <ul>
 

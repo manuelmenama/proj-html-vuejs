@@ -496,8 +496,8 @@ main{
     position: fixed;
     bottom: 0vh;
     right: 0vw;
-    height: 75px;
-    width: 75px;
+    height: 60px;
+    width: 60px;
     background-color: #40c4ff;
     @include flex('center-element');
     flex-direction: column;
