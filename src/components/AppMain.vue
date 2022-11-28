@@ -267,7 +267,159 @@ export default {
       <!-- sezione piani e prezzi -->
       <section>
 
+        <div class="container my-pricing-table">
 
+          <div class="row">
+
+            <div class="col-10 offset-1 text-center my-pricing-title">
+
+              <h2>
+                Pricing Plans
+              </h2>
+              <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas ipsa, omnis vel eius placeat ea nulla ullam earum iusto nesciunt ab beatae aliquid quo dolorum id at autem qui necessitatibus!
+              </p>
+
+            </div>
+
+
+          </div>
+
+          <table class="table table-bordered my-hide" id="myTable">
+            <thead>
+              <tr>
+                <th scope="col" class="my-title">
+                  <h4>Save up to 40% by paying weekly</h4>
+                </th>
+                <th scope="col" class="my-first-plan">
+
+                  <img src="../assets/img/h5-custom-icon-7.png" alt="">
+
+                  <h5>Standard</h5>
+                  <p>price</p>
+
+                </th>
+                <th scope="col" class="my-second-plan my-top-active">
+
+                  <img src="../assets/img/h5-custom-icon-8.png" alt="">
+
+                  <h5>Standard</h5>
+                  <p>price</p>
+
+                </th>
+                <th scope="col" class="my-third-plan">
+
+                  <img src="../assets/img/h5-custom-icon-9.png" alt="">
+
+                  <h5>Standard</h5>
+                  <p>price</p>
+
+                </th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <th scope="row">
+                  <h6>Number of Courses</h6>
+                </th>
+                <td v-for="(element, index) in store.paymentPlans"
+                :key="index">
+                  {{element.numberOfCourses}}
+                </td>
+              </tr>
+              <tr>
+                <th scope="row">
+                  <h6>Time</h6>
+                </th>
+                <td v-for="(element, index) in store.paymentPlans"
+                :key="index">
+                  {{element.duration}}
+                </td>
+              </tr>
+              <tr>
+                <th scope="row">
+                  <h6>Web Designing</h6>
+                </th>
+                <td v-for="(element, index) in store.paymentPlans"
+                :key="index">
+                  
+                  <i class="bi"
+                    :class="[(element.coursesIncluded.webDesigning)?'bi-check-lg':'bi-x-lg']"></i>
+                  
+                </td>
+              </tr>
+              <tr>
+                <th scope="row">
+                  <h6>Human-Centered Degnin</h6>
+                </th>
+                <td v-for="(element, index) in store.paymentPlans"
+                :key="index">
+                  
+                  <i class="bi"
+                    :class="[(element.coursesIncluded.humanCenteredDesign)?'bi-check-lg':'bi-x-lg']"></i>
+                  
+                </td>
+              </tr>
+              <tr>
+                <th scope="row">
+                  <h6>Basic Marketing</h6>
+                </th>
+                <td v-for="(element, index) in store.paymentPlans"
+                :key="index">
+                  
+                  <i class="bi"
+                    :class="[(element.coursesIncluded.basicMarketing)?'bi-check-lg':'bi-x-lg']"></i>
+                  
+                </td>
+              </tr>
+              <tr>
+                <th scope="row">
+                  <h6>Pyton for Everybody</h6>
+                </th>
+                <td v-for="(element, index) in store.paymentPlans"
+                :key="index">
+                  
+                  <i class="bi"
+                    :class="[(element.coursesIncluded.pytonForEverybody)?'bi-check-lg':'bi-x-lg']"></i>
+                  
+                </td>
+              </tr>
+              <tr>
+                <th scope="row">
+                  <h6>Android Developer</h6>
+                </th>
+                <td v-for="(element, index) in store.paymentPlans"
+                :key="index">
+                  
+                  <i class="bi"
+                    :class="[(element.coursesIncluded.androidDeveloper)?'bi-check-lg':'bi-x-lg']"></i>
+                  
+                </td>
+              </tr>
+              <tr>
+                <th scope="row">
+                  <h6>Business English</h6>
+                </th>
+                <td v-for="(element, index) in store.paymentPlans"
+                :key="index">
+                  
+                  <i class="bi"
+                    :class="[(element.coursesIncluded.businessEnglish)?'bi-check-lg':'bi-x-lg']"></i>
+                  
+                </td>
+              </tr>
+              <tr>
+                <th class="my-empty-cell">
+                  <div class="my-div-cover"></div>
+                </th>
+                <td class="my-btn-container"><a href="#" class="my-a-button">GET IT NOW</a></td>
+                <td class="my-btn-container"><a href="#" class="my-a-button my-a-button-active">GET IT NOW</a></td>
+                <td class="my-btn-container"><a href="#" class="my-a-button">GET IT NOW</a></td>
+              </tr>
+            </tbody>
+          </table>
+
+        </div>
 
       </section>
 
@@ -439,12 +591,14 @@ export default {
   padding-top: 5rem;
   min-height: 700px;
   background-image: url(../assets/img/background-pattern.jpg);
-  border-bottom: 1px solid $cta-border;
+  
 }
 
 .my-popular-section{
 
   margin-bottom: 7rem;
+  padding-bottom: 7rem;
+  border-bottom: 1px solid $cta-border;
 
   .my-popular-title{
     margin-bottom: 5rem;
@@ -463,6 +617,102 @@ export default {
     margin-bottom: 2rem;
   }
 
+  
+}
+.my-pricing-table{
+  #myTable { 
+    position: relative;
+    thead th{
+      height: 100px;
+      background-color: $subject-bg-color;
+      text-align: center;
+      padding: 2rem 0;
+      border-top: 5px solid #d6f2ff;
+      &.my-top-active{
+        border-top: 5px solid #40c4ff;
+      }
+      img{
+        margin-bottom: 2rem;
+      }
+      h5{
+        margin-bottom: 1rem;
+        color: #3e3e3e;
+        font-weight: bold;
+      }
+      p{
+        color: #3e3e3e;
+      }
+    }
+    thead .my-title{
+      background-color: rgba(255, 255, 255);
+      padding-bottom: 1.5rem;
+      padding-left: 2rem;
+      padding-right: 3rem;
+      h4{
+        font-weight: bolder;
+        text-align:left;
+      }
+    }
+    th{
+      width: calc(100% / 4);
+      height: 75px;
+    }
+    tbody th,
+    tbody td{
+      background-color: white;
+      
+
+    }
+    tbody tr th{
+      vertical-align: middle;
+      padding-left: 2rem;
+      h6{
+        color: #808080;
+        font-weight: bold;
+      }
+    }
+    tbody tr td.my-btn-container{
+      background-color: $subject-bg-color;
+      padding: 2rem 0;
+    }
+    tbody td{
+      text-align: center;
+      vertical-align: middle;
+      font-size: 1.2rem;
+      color: #808080;
+      i.bi-check-lg{
+        display: inline-block;
+        font-size: 2rem;
+        transform: scaleX(.7);
+        color: #40c4ff;
+      }
+      
+      .my-a-button{
+        height: 50px;
+        line-height: 50px;
+        padding: 0 1rem;
+        background-color: white;
+        color: #808080;
+        border: 2px solid #eaebeb;
+        font-size: 1rem;
+        font-weight: bold;
+      }
+      .my-a-button-active{
+        background-color: #40c4ff;
+        border: 2px solid #40c4ff;
+        color: white;
+      }
+    }
+    .my-div-cover{
+      height: 75px;
+      width: 25%;
+      bottom: 0;
+      left: -1px;
+      background-color: white;
+      position: absolute;
+      z-index: 999;
+    }
+  }
 }
 
 </style>

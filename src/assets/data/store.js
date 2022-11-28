@@ -301,7 +301,7 @@ export const store = reactive ({
     {
       type: "Advanced",
       price: "$88",
-      numberOfCourses: 2,
+      numberOfCourses: 6,
       duration: "30 Days",
       coursesIncluded: {
         webDesigning: true,

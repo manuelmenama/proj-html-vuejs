@@ -97,10 +97,10 @@ export default {
     .my-label-course{
       .my-label{
         background-color: #ffd740;
-        height: 20px;
-        line-height: 20px;
+        height: 24px;
+        line-height: 24px;
         padding: 0 10px;
-        border-radius: 10px;
+        border-radius: 12px;
         color: #ffffff;
         font-size: 0.7rem;
         font-weight: bold;
