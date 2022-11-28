@@ -114,7 +114,6 @@ export default {
       
       </div>
       
-
     </section>
 
     <!-- sezione mappamondo -->
@@ -213,7 +212,6 @@ export default {
 
                 <div class="col-9 my-personal-list">
                   
-
                   <ul>
 
                     <li v-for="(liElement, index) in store.whatIn[store.whatInCounter].powerPoint"
@@ -226,8 +224,6 @@ export default {
 
                   </ul>
                   
-                  
-
                 </div>
 
                 <div class="col-3 align-self-end my-mini-icon">
@@ -273,15 +269,11 @@ export default {
 
         </div>
 
-        
-
         <div class="container my-wrapper-popular">
 
           <MainPopularSlider />
           
         </div>
-
-       
 
       </section>
 
@@ -490,9 +482,10 @@ export default {
 @use '../styles/partials/variables' as *;
 
 main{
+  //elemento per tornare in cima
   position: relative;
   .follow-up{
-    padding-top: 1rem;
+    padding-top: 0.5rem;
     position: fixed;
     bottom: 0vh;
     right: 0vw;
@@ -700,6 +693,7 @@ main{
   
 }
 
+//sezione tabbella pricing
 .my-pricing-section{
   position: relative;
   .my-shop-option{
