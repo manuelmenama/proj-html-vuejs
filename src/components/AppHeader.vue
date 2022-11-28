@@ -49,7 +49,12 @@ export default {
       <div class="my-icon-container">
 
         <i class="fa-solid fa-bars"></i>
-        <i class="bi bi-bag"></i>
+        <div class="my-bag-container">
+          <i class="bi bi-bag"></i>
+          <div class="my-label">
+            <span>0</span>
+          </div>
+        </div>
         <i class="bi bi-search"></i>
 
       </div>
@@ -112,6 +117,26 @@ header{
       margin-left: 2rem;
       font-size: 1.2rem;
       cursor: pointer;     
+    }
+    .my-bag-container{
+      position: relative;
+      .my-label{
+        position: absolute;
+        top: 0;
+        right: -7px;
+        height: 18px;
+        width: 18px;
+        border-radius: 50%;
+        line-height: 18px;
+        background-color: #40c4ff;
+        @include flex('center-element');
+        span{
+          text-align: center;
+          vertical-align: middle;
+          font-size: 0.8rem;
+          color: white;
+        }
+      }
     }
   }
 

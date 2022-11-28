@@ -275,6 +275,8 @@ export const store = reactive ({
       price: "$12",
       numberOfCourses: 2,
       duration: "15 Days",
+      imagePath: "h5-custom-icon-7.png",
+      link: "#",
       coursesIncluded: {
         webDesigning: true,
         humanCenteredDesign: true,
@@ -289,6 +291,8 @@ export const store = reactive ({
       price: "$59",
       numberOfCourses: 4,
       duration: "30 Days",
+      imagePath: "h5-custom-icon-8.png",
+      link: "#",
       coursesIncluded: {
         webDesigning: true,
         humanCenteredDesign: true,
@@ -303,6 +307,8 @@ export const store = reactive ({
       price: "$88",
       numberOfCourses: 6,
       duration: "30 Days",
+      imagePath: "h5-custom-icon-9.png",
+      link: "#",
       coursesIncluded: {
         webDesigning: true,
         humanCenteredDesign: true,
@@ -313,8 +319,31 @@ export const store = reactive ({
       }
     },
   ],
+  pricingPlanCounter: 0,
 
   //store famous clienti
+  famousClient: [
+    {
+      name: "iAcademy",
+      link: "#",
+      logoPath: "h5-client-5.png"
+    },
+    {
+      name: "Study Central",
+      link: "#",
+      logoPath: "h5-client-1.png"
+    },
+    {
+      name: "Educator",
+      link: "#",
+      logoPath: "h5-client-2.png"
+    },
+    {
+      name: "Teach Hub",
+      link: "#",
+      logoPath: "h5-client-3.png"
+    },
+  ],
 
   //store footer
   //info iAcademy

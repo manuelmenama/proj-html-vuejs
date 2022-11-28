@@ -15,13 +15,24 @@ export default {
   },
   data() {
     return {
-      store
+      store,
+      isScrolling: false
     }
   },
   methods: {
     getImagePath: function(imgPath) {
       return new URL(`../assets/img/${imgPath}`, import.meta.url).href;
+    },
+    handleScroll() {
+      // Any code to be executed when the window is scrolled
+      this.isScrolling=true;
     }
+  },
+  created () {
+    window.addEventListener('scroll', this.handleScroll);
+  },
+  destroyed () {
+    window.removeEventListener('scroll', this.handleScroll);
   }
 }
 </script>
@@ -36,6 +47,16 @@ export default {
   </section>
 
   <main>
+
+    <div
+      class="follow-up"
+      @scroll="handleScroll()"
+      v-show="isScrolling===true">
+      <a href="#">
+        <i class="bi bi-chevron-up"></i>
+        <p>TOP</p>
+      </a>
+    </div>
 
     <!-- section con materie -->
     <section class="container my-subject-container">
@@ -265,7 +286,16 @@ export default {
       </section>
 
       <!-- sezione piani e prezzi -->
-      <section>
+      <section class="my-pricing-section">
+
+        <div class="my-shop-option">
+          <div class="my-refresh">
+            
+          </div>
+          <div class="my-basket">
+
+          </div>
+        </div>
 
         <div class="container my-pricing-table">
 
@@ -277,7 +307,7 @@ export default {
                 Pricing Plans
               </h2>
               <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas ipsa, omnis vel eius placeat ea nulla ullam earum iusto nesciunt ab beatae aliquid quo dolorum id at autem qui necessitatibus!
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas ipsa, omnis vel eius placeat.
               </p>
 
             </div>
@@ -291,30 +321,21 @@ export default {
                 <th scope="col" class="my-title">
                   <h4>Save up to 40% by paying weekly</h4>
                 </th>
-                <th scope="col" class="my-first-plan">
+                <th
+                  scope="col"
+                  class="my-first-plan"
+                  v-for="(element, index) in store.paymentPlans"
+                  :key="index"
+                  @click="store.pricingPlanCounter=index"
+                  :class="{'my-top-active':store.pricingPlanCounter===index}">
 
-                  <img src="../assets/img/h5-custom-icon-7.png" alt="">
+                  <img :src="getImagePath(element.imagePath)" :alt="element.type">
 
-                  <h5>Standard</h5>
-                  <p>price</p>
-
-                </th>
-                <th scope="col" class="my-second-plan my-top-active">
-
-                  <img src="../assets/img/h5-custom-icon-8.png" alt="">
-
-                  <h5>Standard</h5>
-                  <p>price</p>
+                  <h5>{{element.type}}</h5>
+                  <p>{{element.price}}</p>
 
                 </th>
-                <th scope="col" class="my-third-plan">
 
-                  <img src="../assets/img/h5-custom-icon-9.png" alt="">
-
-                  <h5>Standard</h5>
-                  <p>price</p>
-
-                </th>
               </tr>
             </thead>
             <tbody>
@@ -412,9 +433,16 @@ export default {
                 <th class="my-empty-cell">
                   <div class="my-div-cover"></div>
                 </th>
-                <td class="my-btn-container"><a href="#" class="my-a-button">GET IT NOW</a></td>
-                <td class="my-btn-container"><a href="#" class="my-a-button my-a-button-active">GET IT NOW</a></td>
-                <td class="my-btn-container"><a href="#" class="my-a-button">GET IT NOW</a></td>
+                <td
+                  v-for="(element, index) in store.paymentPlans"
+                  :key="index"
+                  @click="store.pricingPlanCounter=index"
+                  class="my-btn-container">
+                  <a
+                    :class="{'my-a-button-active':store.pricingPlanCounter===index}"
+                    :href="element.link"
+                    class="my-a-button">GET IT NOW</a>
+                </td>
               </tr>
             </tbody>
           </table>
@@ -428,7 +456,26 @@ export default {
     <!-- sezione famous clienti -->
     <section>
 
+      <div class="container my-famous-client">
 
+        <div class="row">
+
+          <div
+            class="col-3 my-img-client"
+            v-for="(element, index) in store.famousClient"
+            :key="index">
+
+            <a :href="element.link">
+
+              <img :src="getImagePath(element.logoPath)" :alt="element.name">
+
+            </a>
+
+          </div>
+          
+        </div>
+
+      </div>
 
     </section>
 
@@ -440,6 +487,33 @@ export default {
 
 @use '../styles/partials/mixin' as *;
 @use '../styles/partials/variables' as *;
+
+main{
+  position: relative;
+  .follow-up{
+    padding-top: 1rem;
+    position: fixed;
+    bottom: 0vh;
+    right: 0vw;
+    height: 75px;
+    width: 75px;
+    background-color: #40c4ff;
+    @include flex('center-element');
+    flex-direction: column;
+    text-align: center;
+    a{
+      text-decoration: none;
+      color: white;
+    }
+    i{
+      font-size: 1.5rem;
+      font-weight: bold;
+    }
+    p{
+      font-weight: bold;
+    }
+  }
+}
 
 .jumbo{
   width: 100%;
@@ -588,6 +662,7 @@ export default {
 
 .my-background{
   border-top: 1px solid $cta-border;
+  border-bottom: 1px solid $cta-border;
   padding-top: 5rem;
   min-height: 700px;
   background-image: url(../assets/img/background-pattern.jpg);
@@ -620,6 +695,18 @@ export default {
   
 }
 .my-pricing-table{
+  margin-bottom: 7rem;
+  .my-pricing-title{
+    margin-bottom: 4rem;
+    h2{
+      margin-bottom: 2rem;
+    }
+    p{
+      color: #595959;
+      font-size: 1.2rem;
+    }
+    
+  }
   #myTable { 
     position: relative;
     thead th{
@@ -641,6 +728,7 @@ export default {
       }
       p{
         color: #3e3e3e;
+        font-size: 1.2rem;
       }
     }
     thead .my-title{
@@ -704,13 +792,24 @@ export default {
       }
     }
     .my-div-cover{
-      height: 75px;
+      height: 115px;
       width: 25%;
       bottom: 0;
       left: -1px;
       background-color: white;
       position: absolute;
       z-index: 999;
+    }
+  }
+}
+
+.my-famous-client{
+  height: 200px;
+  @include flex('center-element');
+  .my-img-client{
+    @include flex('center-element');
+    a:hover img{
+      filter: brightness(180%);
     }
   }
 }
