@@ -117,8 +117,8 @@ export const store = reactive ({
       logoPath: "h12-tabs-icon-2.png",
       powerPoint: [
         "We enrich lives through insividual learning.",
-        "Mazimizing potential through individual attention.",
-        "The trusted name for specialized training.",
+        "Amet eos at et sadipscing ipsum amet.",
+        "Gild at a thy was birth in lay.",
         "People teach. People learn. This is were they connect."
       ]
     },
@@ -129,9 +129,9 @@ export const store = reactive ({
       logoPath: "h12-tabs-icon-3.png",
       powerPoint: [
         "We enrich lives through insividual learning.",
-        "Mazimizing potential through individual attention.",
+        "And day breast him and one bliss.",
         "The trusted name for specialized training.",
-        "People teach. People learn. This is were they connect."
+        "But his condole lone nor cared, and."
       ]
     },
     {
@@ -141,8 +141,8 @@ export const store = reactive ({
       logoPath: "h12-tabs-icon-4.png",
       powerPoint: [
         "We enrich lives through insividual learning.",
-        "Mazimizing potential through individual attention.",
-        "The trusted name for specialized training.",
+        "His would was with begun to.",
+        "Earth from a way sun breast venerable.",
         "People teach. People learn. This is were they connect."
       ]
     },
