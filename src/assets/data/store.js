@@ -34,15 +34,18 @@ export const store = reactive ({
   jumbotronCta: [
     {
       title: "Contemporay Ideas",
-      description: "Sed dolore consetetur sit sadipscing stet sit accusam eos est et. Eos consetetur amet sed tempor aliquyam et no takimata ea. Duo aliquyam et sadipscing rebum sed. Sed sit rebum."
+      description: "Sed dolore consetetur sit sadipscing stet sit accusam eos est et. Eos consetetur amet sed tempor aliquyam et no takimata ea. Duo aliquyam et sadipscing rebum sed. Sed sit rebum.",
+      imagePath: "course-9-f-img.jpg"
     },
     {
       title: "Lorem Ipsum",
-      description: "Rebum ut et ipsum magna magna dolore. Dolore magna dolore voluptua kasd voluptua duo. Tempor kasd sed sadipscing sit sea. Voluptua kasd et lorem clita tempor erat sit dolor, dolor."
+      description: "Rebum ut et ipsum magna magna dolore. Dolore magna dolore voluptua kasd voluptua duo. Tempor kasd sed sadipscing sit sea. Voluptua kasd et lorem clita tempor erat sit dolor, dolor.",
+      imagePath: "course-11-f-img.jpg"
     },
     {
       title: "Essilio di",
-      description: "Et nonumy rebum consetetur dolore sit est et sanctus, et erat dolor aliquyam sadipscing est voluptua amet magna, ipsum stet ipsum consetetur no ea labore dolores ipsum, lorem ipsum et."
+      description: "Et nonumy rebum consetetur dolore sit est et sanctus, et erat dolor aliquyam sadipscing est voluptua amet magna, ipsum stet ipsum consetetur no ea labore dolores ipsum, lorem ipsum et.",
+      imagePath: "course-12-f-img.jpg"
     },
   ],
   
@@ -320,7 +323,6 @@ export const store = reactive ({
     },
   ],
   pricingPlanCounter: 0,
-
   //store famous clienti
   famousClient: [
     {

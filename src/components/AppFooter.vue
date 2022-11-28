@@ -176,6 +176,9 @@ footer{
           text-decoration: none;
           color: $footer-text-color;
         }
+        li:hover a{
+          color: #40c4ff;
+        }
       }
     }
   }
@@ -234,6 +237,10 @@ footer{
           text-decoration: none;
           color: $lowerfooter-text;
           margin-left: 1.5rem;
+
+        }
+        li:hover a{
+          color: #40c4ff;
         }
       }
     }

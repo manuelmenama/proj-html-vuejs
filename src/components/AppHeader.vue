@@ -106,6 +106,9 @@ header{
           text-decoration: none;
         }
       }
+      li:hover a{
+          color: #40c4ff;
+      }
     }
   }
   .my-icon-container{
@@ -116,7 +119,11 @@ header{
       color: $text-color-white;
       margin-left: 2rem;
       font-size: 1.2rem;
-      cursor: pointer;     
+      cursor: pointer;
+      transform: scaleX(-1);
+      &:hover{
+        color:#40c4ff
+      }
     }
     .my-bag-container{
       position: relative;

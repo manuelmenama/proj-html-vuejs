@@ -27,6 +27,11 @@ export default {
     return {
       store
     }
+  },
+  methods: {
+    getImagePath: function(imgPath) {
+      return new URL(`../../assets/img/${imgPath}`, import.meta.url).href;
+    }
   }
 };
 </script>
@@ -49,7 +54,7 @@ export default {
       
       <div class="my-jumbo-cta">
         
-        <img src="../../assets/img/course-9-f-img.jpg" alt="">
+        <img :src="getImagePath(title.imagePath)" alt="">
 
         <div class="container my-box-cta">
 
@@ -117,6 +122,9 @@ img{
         width: 200px;
         height: 60px;
         line-height: 60px;
+      }
+      a:hover{
+          color: white;
       }
     }
   }

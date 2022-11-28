@@ -289,10 +289,11 @@ export default {
       <section class="my-pricing-section">
 
         <div class="my-shop-option">
-          <div class="my-refresh">
-            
+          <div class="my-box my-refresh">
+            <img src="../assets/img/svg-3.svg" alt="">
           </div>
-          <div class="my-basket">
+          <div class="my-box my-basket">
+            <img src="../assets/img/svg-2.svg" alt="">
 
           </div>
         </div>
@@ -529,6 +530,10 @@ main{
   background-color: $subject-bg-color;
   @include flex('center-element');
   flex-direction: column;
+  cursor: pointer;
+  &:hover{
+    filter: brightness(101.5%);
+  }
   img{
     margin-bottom: 3rem;
   }
@@ -693,6 +698,39 @@ main{
   }
 
   
+}
+
+.my-pricing-section{
+  position: relative;
+  .my-shop-option{
+    position: absolute;
+    right: 0;
+    top: 195px;
+    img{
+      max-width: 80%;
+    }
+    .my-box{
+      height: 50px;
+      width: 50px;
+      background-color: white;
+      box-shadow: -2px 0px 4px rgba(0, 0, 0, 0.151);
+      margin-bottom: 5px;
+      cursor: pointer;
+      @include flex('center-element');
+
+      &.my-refresh{
+        background-color: #ee2852;
+      }
+      &.my-refresh img{
+        
+        filter: grayscale(100%);
+        filter: brightness(1000%);
+      }
+      &.my-basket img{
+        max-width: 40%;
+      }
+    }
+  }
 }
 .my-pricing-table{
   margin-bottom: 7rem;
